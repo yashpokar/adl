@@ -1,0 +1,98 @@
+.adl-form
+	font-size: 14px
+
+	&__input-group
+		padding: 8px
+
+	&__input-field,
+	&__select-box,
+	.adl-button
+		width: $input-width
+		padding: $input-padding
+		border-radius: $input-border-radius
+
+	&__input-field,
+	&__select-box
+		border: $input-border
+
+		&:focus
+			border-color: #79d0ec
+
+	&__check-box input[type='checkbox'],
+	&__radio-button input[type='radio'],
+	&__toggle-button input[type='checkbox']
+		visibility: hidden
+
+	&__check-box input[type="checkbox"] + .adl-form__check-box__text:before,
+	&__radio-button input[type="radio"] + .adl-form__radio-button__text:before,
+	&__toggle-button input[type="checkbox"] + .adl-form__toggle-button__text:before
+		font-family: 'FontAwesome'
+		speak: normal
+		font-style: normal
+		font-weight: normal
+		font-variant: normal
+		text-transform: normal
+		line-height: 1
+		webkit-font-smoothing: antialiased
+		margin-right: 5px
+		color: #06a3e9
+		font-size: 15px
+
+	&__check-box input[type="checkbox"]:checked + .adl-form__check-box__text:before,
+	&__radio-button input[type="radio"]:checked + .adl-form__radio-button__text:before,
+	&__toggle-button input[type="checkbox"]:checked + .adl-form__toggle-button__text:before
+		color: #06a3e9
+
+	&__check-box input[type="checkbox"]:disabled + .adl-form__check-box__text,
+	&__radio-button input[type="radio"]:disabled + .adl-form__radio-button__text,
+	&__toggle-button input[type="checkbox"]:disabled + .adl-form__toggle-button__text
+		color: #aaa
+
+	&__check-box input[type="checkbox"]:disabled + .adl-form__check-box__text:before,
+	&__radio-button input[type="radio"]:disabled + .adl-form__radio-button__text:before,
+	&__toggle-button input[type="checkbox"]:disabled + .adl-form__toggle-button__text:before
+		color: #ccc
+	
+	&__check-box__text,
+	&__radio-button__text,
+	&__toggle-button
+		cursor: pointer
+
+	&__check-box 
+		
+		input[type='checkbox']
+
+			+ .adl-form__check-box__text:before
+				content: '\f096'
+
+			&:checked + .adl-form__check-box__text:before
+				content: '\f14a'
+
+			&:disabled + .adl-form__check-box__text:before
+				content: '\f0c8'
+
+	&__radio-button
+		
+		input[type='radio'] 
+
+			+ .adl-form__radio-button__text:before
+				content: '\f10c'
+
+			&:checked + .adl-form__radio-button__text:before
+				content: '\f192'
+
+			&:disabled + .adl-form__radio-button__text:before
+				content: '\f111'
+
+	&__toggle-button
+		
+		input[type='checkbox'] 
+
+			+ .adl-form__toggle-button__text:before
+				content: '\f204'
+
+			&:checked + .adl-form__toggle-button__text:before
+				content: '\f205'
+
+			&:disabled + .adl-form__toggle-button__text:before
+				content: '\f204'

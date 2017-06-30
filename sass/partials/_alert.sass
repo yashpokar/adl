@@ -1,0 +1,40 @@
+.adl-alert
+	position: relative
+	height: 50px
+	line-height: 50px
+	padding-left: 25px
+	color: #fff
+	border-radius: 5px
+	box-shadow: 0 2px 4px -3px rgba(0, 0, 0, .35)
+
+	&__close
+		position: absolute
+		font-size: 28px
+		right: 16px
+		top: 6px
+
+	&--fixed-top
+		position: fixed
+		top: 0
+		left: 0
+		right: 0
+
+	&--default
+		background-color: #ddd
+	
+	&--success
+		background-color: $success-background-color
+
+	&--error
+		background-color: $error-background-color
+
+	&--warning
+		background-color: $warning-background-color
+
+	&--info
+		background-color: $info-background-color
+
+	button.adl-alert__close
+		background-color: transparent
+		border: none
+		padding: 0

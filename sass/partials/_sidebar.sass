@@ -1,0 +1,28 @@
+.adl-sidebar
+	visibility: hidden
+	background-color: #666
+	color: #333
+	position: fixed
+	width: 250px
+	top: $navigation-height
+	left: 0
+	bottom: 0
+	z-index: 100
+	box-shadow: 2px 0 4px -2px rgba(0, 0, 0, .4)
+
+	&__menu
+		padding: 0
+		list-style: none
+
+		& > li 
+			
+			& > a 
+				border-left: 3px solid #666
+				padding: 12px 15px
+				text-decoration: none
+				color: #fff
+				display: block
+
+				&:hover
+					border-color: #666 - 40
+					background-color: #606060

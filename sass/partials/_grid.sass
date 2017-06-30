@@ -1,0 +1,29 @@
+[class^="adl-container"]
+	margin: auto
+
+.adl-container
+	width: 92%
+
+	&--full
+		width: 100%
+
+.adl-row
+	
+	&::after,
+	&::before
+		content: '',
+		display: table
+
+	&::after
+		clear: both
+
+[class^="adl-col-"]
+	float: left
+	padding: 15px
+
+@for $i from 1 through 12
+	.adl-col-#{$i}
+		width: calc(((100% * #{$i})/12) - 30px)
+
+	.adl-col-offset-#{$i}
+		margin-left: calc(((100% * #{$i})/12) - 30px)
